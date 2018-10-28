@@ -37,6 +37,27 @@ def list_modes():
             'HSV', 'I', 'F']
 
 
+def get_pixels_from_image(image):
+    """
+    Returns a numpy array of the pixels from a PIL.Image
+
+    :param image: An image, PIL.Image
+    :return: A numpy array
+    """
+    return np.array(image)
+
+
+def read_pixels(filename, color_mode='RGB'):
+    """
+    Reads the pixels of an image form a Numpy array
+
+    :param filename: The name of the file to read in, str
+    :param color_mode: The color mode, str
+    :return: A Numpy array
+    """
+    return np.array(read_image(filename, color_mode=color_mode))
+
+
 if __name__ == '__main__':
     test = 'test.jpeg'
 
